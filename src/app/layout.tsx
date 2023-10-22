@@ -1,8 +1,8 @@
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
-import { NextUIProvider } from "@nextui-org/react";
 import { Providers } from "./Providers";
+import AppShell from "./components/appShell/AppShell";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="text-foreground bg-background dark">
       <body className={`font-sans ${inter.variable}`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <AppShell>{children}</AppShell>
+        </Providers>
       </body>
     </html>
   );

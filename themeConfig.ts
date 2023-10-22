@@ -4,17 +4,17 @@ import {
   NextUIPluginConfig,
 } from "@nextui-org/react";
 
-type Theme = "dark" | "light";
+export type Theme = "dark" | "light";
 
 const themeConfig: Record<Theme, ConfigTheme> = {
   dark: {
     colors: {
-      default: "red",
+      foreground: "#fff",
     },
   },
   light: {
     colors: {
-      default: "green",
+      foreground: "#000",
     },
   },
 } as const;

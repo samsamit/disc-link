@@ -1,6 +1,7 @@
 "use client";
 
-import { Button } from "@nextui-org/react";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import { Button, Switch } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Theme } from "themeConfig";
@@ -16,13 +17,18 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div className="flex items-center gap-2">
-      <p>Switch to:</p>
-      {(theme as Theme) === "dark" ? (
-        <Button onClick={() => setTheme("light")}>Light Mode</Button>
-      ) : (
-        <Button onClick={() => setTheme("dark")}>Dark Mode</Button>
-      )}
-    </div>
+    <Switch
+      isSelected={(theme as Theme) === "light"}
+      onValueChange={(checked) => setTheme(checked ? "light" : "dark")}
+      size="lg"
+      color="default"
+      thumbIcon={({ isSelected, className }) =>
+        isSelected ? (
+          <SunIcon className={className} />
+        ) : (
+          <MoonIcon className={className} />
+        )
+      }
+    />
   );
 }
