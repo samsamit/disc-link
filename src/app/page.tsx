@@ -1,4 +1,6 @@
+import { Button } from "@nextui-org/react";
 import Link from "next/link";
+import { ThemeSwitcher } from "./components/ThemeSwitcher/ThemeSwitcher";
 
 export default function HomePage() {
   return (
@@ -7,6 +9,7 @@ export default function HomePage() {
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
           Disc<span className="text-[hsl(280,100%,70%)]">Link</span>
         </h1>
+        <ThemeSwitcher />
       </div>
     </main>
   );
