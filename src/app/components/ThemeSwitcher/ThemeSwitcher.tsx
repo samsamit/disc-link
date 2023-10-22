@@ -3,7 +3,7 @@
 import { Button } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-type Theme = "dark" | "light";
+import { Theme } from "themeConfig";
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);

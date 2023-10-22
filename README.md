@@ -16,6 +16,12 @@ With these in mind I decided to go for the following stack:
 - [NextUI](https://nextui.org/) as a component library
   - With next-themes package to handle fluid theme switching
 
+## Desing
+
+The apps desing should support Light and Dark themes while keeping the app look visually beautiful while keeping the accessability in mind.
+
+- Im using (ColorBox)[https://colorbox.io/] tool to deside my theme colors
+
 ## The bakcbone
 
 This app is created using `create-t3-app` that uses [T3 Stack](https://create.t3.gg/). to learn more about it take a look at the [Documentation](https://create.t3.gg/)
